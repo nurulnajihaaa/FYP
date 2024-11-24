@@ -1,1 +1,6 @@
+streamlit
+mtcnn
+opencv-python-headless
+pillow
+numpy
 
