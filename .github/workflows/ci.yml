@@ -1,0 +1,30 @@
+name: Python CI  # The name of the workflow
+
+on:              # defines when the workflow runs. It runs on 'push' or 'pull_request' to the 'main' branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:            # This section defines the steps that GitHub Actions will execute
+  build:
+    runs-on: ubuntu-latest  # Or any OS you want, e.g., 'windows-latest' # The environment in which the job will run
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2    # This step checks out the code from the repository
+
+    - name: Set up Python
+      uses: actions/setup-python@v4   # This step sets up Python on the runner
+      with:
+        python-version: '3.12'  # Use the Python version you need
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install setuptools  # Install setuptools to resolve pkg_resources
+        pip install -r requirements.txt  # requirements.txt for other dependencies
+
+    - name: Run Streamlit app
+      run: |
+        streamlit run face_detection.py  # script name
