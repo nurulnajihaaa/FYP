@@ -1,2 +1,34 @@
-# Ignore system and cache files
+# System and user files to ignore
 AppData/
+Contacts/
+Desktop/
+Documents/
+Downloads/
+Favorites/
+Links/
+Music/
+OneDrive/
+Pictures/
+Saved Games/
+Searches/
+Videos/
+NTUSER.*
+*.ini
+*.blf
+*.regtrans-ms
+
+# Python-related ignores
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# IDEs and tools
+.vscode/
+.idea/
+.DS_Store
+
+# Virtual environments
+venv/
+anaconda3/
+miniconda3/
