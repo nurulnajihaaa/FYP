@@ -85,5 +85,5 @@ with mp_face_mesh.FaceMesh(static_image_mode=True, max_num_faces=1, refine_landm
             cv2.circle(image, (x, y), 2, (0, 255, 0), -1)
             cv2.putText(image, label, (x,y - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1, cv2.LINE_AA)
     # Display or save the image
-    cv2_imshow(image) #Requires a suitable environment for displaying images
-    cv2.imwrite("output_image.jpg", image)
+    st.image()(image) #Requires a suitable environment for displaying images
+    st.write("output_image.jpg", image)
