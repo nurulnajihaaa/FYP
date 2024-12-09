@@ -44,6 +44,7 @@ try:
             cv2.putText(image, keypoint_name, (x_coord, y_coord), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
 
     st.image(image)
+    st.write("Image successfully annotated.")
 
 except Exception as e:
     print(f"Error processing the image with MTCNN: {e}")
