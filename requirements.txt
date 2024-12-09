@@ -11,4 +11,3 @@ matplotlib
 scikit-learn
 setuptools
 tensorflow
-Opencv
