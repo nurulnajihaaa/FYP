@@ -21,5 +21,5 @@ else:
     st.subheader("Image as NumPy Array")
     st.text(f"Image Shape: {image_np.shape}")
     st.write(image_np)  # Display NumPy array values
-else:
-    st.info("Please upload an image to display and convert.")
+#else:
+   # st.info("Please upload an image to display and convert.")
