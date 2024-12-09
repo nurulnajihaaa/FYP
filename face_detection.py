@@ -26,34 +26,34 @@ from mtcnn import MTCNN
 import cv2
 #from google.colab.patches import cv2_imshow
 
-try:
-    image = cv2.cvtColor(image_array, cv2.COLOR_RGB2BGR)
-    detector = MTCNN()
-    st.write("Detected succesfully.")
-    faces = detector.detect_faces(image)
-    st.write("Detected face succesfully.")
+#try:
+ # image = cv2.cvtColor(image_array, cv2.COLOR_RGB2BGR)
+    #detector = MTCNN()
+    #st.write("Detected succesfully.")
+    #faces = detector.detect_faces(image)
+    #st.write("Detected face succesfully.")
 
-    for face in faces:
-        x, y, width, height = face['box']
-        keypoints = face['keypoints']
+for face in faces:
+    x, y, width, height = face['box']
+    keypoints = face['keypoints']
 
-        # Draw bounding box around the face
-        cv2.rectangle(image, (x, y), (x + width, y + height), (0, 255, 0), 2)
+# Draw bounding box around the face
+cv2.rectangle(image, (x, y), (x + width, y + height), (0, 255, 0), 2)
 
-        # Annotate facial landmarks
-        for keypoint_name, (x_coord, y_coord) in keypoints.items():
-            cv2.circle(image, (x_coord, y_coord), 2, (0, 0, 255), 2)
-            cv2.putText(image, keypoint_name, (x_coord, y_coord), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
+# Annotate facial landmarks
+for keypoint_name, (x_coord, y_coord) in keypoints.items():
+    cv2.circle(image, (x_coord, y_coord), 2, (0, 0, 255), 2)
+    cv2.putText(image, keypoint_name, (x_coord, y_coord), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
 
-    # Convert BGR back to RGB for Streamlit display
-    annotated_image = cv2.cvtColor(_image, cv2.COLOR_BGR2RGB)
+# Convert BGR back to RGB for Streamlit display
+annotated_image = cv2.cvtColor(_image, cv2.COLOR_BGR2RGB)
 
-    # Display the annotated image in Streamlit
-    st.subheader("Annotated Image")
-    st.image(annotated_image, caption="Detected Faces and Landmarks", use_column_width=True)
-    st.success("Image successfully annotated.")
-    #st.image(image)
-    #st.write("Image successfully annotated.")
+# Display the annotated image in Streamlit
+st.subheader("Annotated Image")
+st.image(annotated_image, caption="Detected Faces and Landmarks", use_column_width=True)
+st.success("Image successfully annotated.")
+#st.image(image)
+#st.write("Image successfully annotated.")
 
 except Exception as e:
     print(f"Error processing the image with MTCNN: {e}")
