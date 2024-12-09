@@ -13,13 +13,14 @@ if uploaded_file is not None:
     st.subheader("Uploaded Image")
     image = Image.open(uploaded_file)
     st.image(image, caption="Uploaded Image", use_column_width=True)
-else:
-    st.info("Please upload an image to display.")
-
-    # Convert the image to a NumPy array
+        # Convert the image to a NumPy array
     image_np = np.array(image)
     st.subheader("Image as NumPy Array")
     st.text(f"Image Shape: {image_np.shape}")
     st.write(image_np)  # Display NumPy array values
+else:
+    st.info("Please upload an image to display.")
+
+
 #else:
    # st.info("Please upload an image to display and convert.")
