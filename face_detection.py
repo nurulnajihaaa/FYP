@@ -43,8 +43,15 @@ try:
             cv2.circle(image, (x_coord, y_coord), 2, (0, 0, 255), 2)
             cv2.putText(image, keypoint_name, (x_coord, y_coord), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
 
-    st.image(image)
-    st.write("Image successfully annotated.")
+    # Convert BGR back to RGB for Streamlit display
+    annotated_image = cv2.cvtColor(_image, cv2.COLOR_BGR2RGB)
+
+    # Display the annotated image in Streamlit
+    st.subheader("Annotated Image")
+    st.image(annotated_image, caption="Detected Faces and Landmarks", use_column_width=True)
+    st.success("Image successfully annotated.")
+    #st.image(image)
+    #st.write("Image successfully annotated.")
 
 except Exception as e:
     print(f"Error processing the image with MTCNN: {e}")
