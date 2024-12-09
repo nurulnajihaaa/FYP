@@ -24,9 +24,9 @@ if img_file_buffer is not None:
     # Should output shape: (height, width, channels)
     #st.write(cv2_img.shape)
 
-# Convert the image to a NumPy array
-image_np = np.array(cv2_img)
-st.write("Image successfully uploaded and processed as a NumPy array.")
+    # Convert the image to a NumPy array
+    image_np = np.array(cv2_img)
+    st.write("Image successfully uploaded and processed as a NumPy array.")
 
 from mtcnn import MTCNN
 import cv2
