@@ -26,7 +26,7 @@ from mtcnn import MTCNN
 import cv2
 #from google.colab.patches import cv2_imshow
 
-#try:
+try:
     image = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
     detector = MTCNN()
     st.write("Detected succesfully.")
