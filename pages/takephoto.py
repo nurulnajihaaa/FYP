@@ -10,8 +10,9 @@ from PIL import Image
 #if picture:
 #    st.image(picture)
 
-
-img_file_buffer = st.camera_input("Take a picture")
+# Step 1: Camera Input or File Uploader
+img_file_buffer = st.camera_input("Take a picture")  # Capture from camera
+uploaded_file = st.file_uploader("Or upload an image", type=["jpg", "jpeg", "png"])
 
 if img_file_buffer is not None:
     # To read image file buffer with OpenCV:
@@ -37,10 +38,6 @@ drawing_spec = mp_drawing.DrawingSpec(thickness=1, circle_radius=1)
 
 # Streamlit App Title
 st.title("Face Mesh Detection with MediaPipe")
-
-# Step 1: Camera Input or File Uploader
-img_file_buffer = st.camera_input("Take a picture")  # Capture from camera
-uploaded_file = st.file_uploader("Or upload an image", type=["jpg", "jpeg", "png"])
 
 # Load image (from camera or file uploader)
 if img_file_buffer is not None:
