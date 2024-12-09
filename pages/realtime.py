@@ -2,11 +2,11 @@ import streamlit as st
 import cv2
 import numpy as np
 
-enable = st.checkbox("Enable camera")
-picture = st.camera_input("Take a picture", disabled=not enable)
+#enable = st.checkbox("Enable camera")
+#picture = st.camera_input("Take a picture", disabled=not enable)
 
-if picture:
-    st.image(picture)
+#if picture:
+#    st.image(picture)
 
 
 img_file_buffer = st.camera_input("Take a picture")
