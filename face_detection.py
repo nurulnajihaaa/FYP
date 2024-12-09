@@ -55,5 +55,5 @@ st.success("Image successfully annotated.")
 #st.image(image)
 #st.write("Image successfully annotated.")
 
-except Exception as e:
-    print(f"Error processing the image with MTCNN: {e}")
+#except Exception as e:
+ #   print(f"Error processing the image with MTCNN: {e}")
