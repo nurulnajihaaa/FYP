@@ -43,7 +43,7 @@ try:
             cv2.circle(image, (x_coord, y_coord), 2, (0, 0, 255), 2)
             cv2.putText(image, keypoint_name, (x_coord, y_coord), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
 
-    cv2_imshow(image)
+    st.image(image)
 
 except Exception as e:
     print(f"Error processing the image with MTCNN: {e}")
