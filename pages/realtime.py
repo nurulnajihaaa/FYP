@@ -18,14 +18,14 @@ if img_file_buffer is not None:
 
     # Check the type of cv2_img:
     # Should output: <class 'numpy.ndarray'>
-    st.write(type(cv2_img))
+    #st.write(type(cv2_img))
 
     # Check the shape of cv2_img:
     # Should output shape: (height, width, channels)
-    st.write(cv2_img.shape)
+    #st.write(cv2_img.shape)
 
 # Convert the image to a NumPy array
-image_np = np.array(image)
+image_np = np.array(cv2_img)
 st.write("Image successfully uploaded and processed as a NumPy array.")
 
 from mtcnn import MTCNN
