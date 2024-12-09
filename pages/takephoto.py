@@ -30,10 +30,6 @@ if img_file_buffer is not None:
     image_np = np.array(cv2_img)
     st.write("Image successfully uploaded and processed as a NumPy array.")
 
-mp_face_mesh = mp.solutions.face_mesh
-mp_drawing = mp.solutions.drawing_utils
-drawing_spec = mp_drawing.DrawingSpec(thickness=1, circle_radius=1)
-
 # Initialize MediaPipe Face Mesh
 mp_face_mesh = mp.solutions.face_mesh
 mp_drawing = mp.solutions.drawing_utils
