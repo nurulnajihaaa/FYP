@@ -1,6 +1,7 @@
 import streamlit as st
 import cv2
 import numpy as np
+import mediapipe as mp
 
 #enable = st.checkbox("Enable camera")
 #picture = st.camera_input("Take a picture", disabled=not enable)
@@ -27,3 +28,5 @@ if img_file_buffer is not None:
     # Convert the image to a NumPy array
     image_np = np.array(cv2_img)
     st.write("Image successfully uploaded and processed as a NumPy array.")
+
+
