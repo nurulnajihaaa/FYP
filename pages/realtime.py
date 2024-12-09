@@ -20,6 +20,10 @@ if img_file_buffer is not None:
     # Should output: <class 'numpy.ndarray'>
     st.write(type(cv2_img))
 
+
+# Convert the image to a NumPy array
+image_np = np.array(image)
+
     # Check the shape of cv2_img:
     # Should output shape: (height, width, channels)
     st.write(cv2_img.shape)
