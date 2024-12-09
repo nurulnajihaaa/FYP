@@ -27,11 +27,11 @@ import cv2
 #from google.colab.patches import cv2_imshow
 
 #try:
- # image = cv2.cvtColor(image_array, cv2.COLOR_RGB2BGR)
-    #detector = MTCNN()
-    #st.write("Detected succesfully.")
-    #faces = detector.detect_faces(image)
-    #st.write("Detected face succesfully.")
+image = cv2.cvtColor(image_array, cv2.COLOR_RGB2BGR)
+detector = MTCNN()
+st.write("Detected succesfully.")
+faces = detector.detect_faces(image)
+st.write("Detected face succesfully.")
 
 for face in faces:
     x, y, width, height = face['box']
@@ -55,5 +55,5 @@ st.success("Image successfully annotated.")
 #st.image(image)
 #st.write("Image successfully annotated.")
 
-#except Exception as e:
- #   print(f"Error processing the image with MTCNN: {e}")
+except Exception as e:
+    print(f"Error processing the image with MTCNN: {e}")
