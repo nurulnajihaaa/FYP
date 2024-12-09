@@ -46,7 +46,7 @@ for keypoint_name, (x_coord, y_coord) in keypoints.items():
     cv2.putText(image, keypoint_name, (x_coord, y_coord), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
 
 # Convert BGR back to RGB for Streamlit display
-annotated_image = cv2.cvtColor(_image, cv2.COLOR_BGR2RGB)
+annotated_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 # Display the annotated image in Streamlit
 st.subheader("Annotated Image")
