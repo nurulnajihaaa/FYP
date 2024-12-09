@@ -29,7 +29,9 @@ import cv2
 try:
     image = cv2.cvtColor(image_array, cv2.COLOR_RGB2BGR)
     detector = MTCNN()
+    st.write("Detected succesfully.")
     faces = detector.detect_faces(image)
+    st.write("Detected face succesfully.")
 
     for face in faces:
         x, y, width, height = face['box']
