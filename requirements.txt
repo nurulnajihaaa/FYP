@@ -11,4 +11,4 @@ matplotlib
 scikit-learn
 setuptools
 tensorflow
-opencv
+Opencv
