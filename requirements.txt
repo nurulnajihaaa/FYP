@@ -1,5 +1,6 @@
 streamlit
-mtcnn==0.1.1   # menggunakan versi yang stabil
+mtcnn
+#mtcnn==0.1.1   # menggunakan versi yang stabil
 #mtcnn_cv2
 opencv-python
 opencv-python-headless
