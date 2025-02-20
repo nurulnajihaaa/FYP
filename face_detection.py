@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 
 # Streamlit App Title
-st.title("Face Detection with MTCNN")
+st.title("Face Detection with HRNet")
 
 # File uploader
 uploaded_file = st.file_uploader("Upload an Image", type=["jpg", "jpeg", "png"])
