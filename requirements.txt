@@ -15,3 +15,5 @@ mediapipe
 torch
 torchvision
 transforms
+hrnet
+HRNetModel
