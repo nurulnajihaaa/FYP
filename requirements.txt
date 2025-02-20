@@ -13,3 +13,5 @@ setuptools
 tensorflow
 mediapipe
 torch
+torchvision
+transforms
