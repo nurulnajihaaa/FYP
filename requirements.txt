@@ -12,3 +12,4 @@ scikit-learn
 setuptools
 tensorflow
 mediapipe
+torch
