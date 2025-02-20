@@ -4,7 +4,7 @@ import numpy as np
 import streamlit as st
 from PIL import Image
 from torchvision import transforms
-from hrnet import HRNetModel  # Assume you have an HRNet model implementation
+from hrnet import HRNetModel
 
 # Define the model path
 HRNET_MODEL_PATH = "hrnet_facial_landmarks.pth"
